@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/iamaro/Workspace/facter/lib/tests/mock_server.cc
+cstdlib
+-
+iostream
+-
+utility
+-
+mock_server.hpp
+/home/iamaro/Workspace/facter/lib/tests/mock_server.hpp
+
+/home/iamaro/Workspace/facter/lib/tests/mock_server.hpp
+boost/asio.hpp
+-
+boost/thread.hpp
+-
+

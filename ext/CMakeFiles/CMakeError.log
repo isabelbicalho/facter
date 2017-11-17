@@ -1,0 +1,248 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7a7fa/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7a7fa.dir/build.make CMakeFiles/cmTC_7a7fa.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a7fa.dir/CheckSymbolExists.c.o
+/usr/bin/x86_64-linux-gnu-gcc    -g -O2 -fstack-protector-strong -Wformat -Werror=format-security     -o CMakeFiles/cmTC_7a7fa.dir/CheckSymbolExists.c.o   -c /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_7a7fa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a7fa.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security     -Wl,-Bsymbolic-functions -Wl,-z,relro  CMakeFiles/cmTC_7a7fa.dir/CheckSymbolExists.c.o  -o cmTC_7a7fa -rdynamic 
+CMakeFiles/cmTC_7a7fa.dir/CheckSymbolExists.c.o: na função `main':
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8: referência indefinida para `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7a7fa.dir/build.make:97: recipe for target 'cmTC_7a7fa' failed
+make[3]: *** [cmTC_7a7fa] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7a7fa/fast' failed
+make[2]: *** [cmTC_7a7fa/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+File /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b1192/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b1192.dir/build.make CMakeFiles/cmTC_b1192.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b1192.dir/CheckFunctionExists.c.o
+/usr/bin/x86_64-linux-gnu-gcc    -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b1192.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b1192
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1192.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCHECK_FUNCTION_EXISTS=pthread_create   -Wl,-Bsymbolic-functions -Wl,-z,relro  CMakeFiles/cmTC_b1192.dir/CheckFunctionExists.c.o  -o cmTC_b1192 -rdynamic -lpthreads 
+/usr/bin/ld: não foi possível encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b1192.dir/build.make:97: recipe for target 'cmTC_b1192' failed
+make[3]: *** [cmTC_b1192] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b1192/fast' failed
+make[2]: *** [cmTC_b1192/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_392b1/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_392b1.dir/build.make CMakeFiles/cmTC_392b1.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_392b1.dir/src.cxx.o
+/usr/bin/x86_64-linux-gnu-g++     -Wextra -std=c++11 -Wall -Werror -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-missing-field-initializers -Wno-maybe-uninitialized -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTC_392b1.dir/src.cxx.o -c /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:25: error: ‘int somefunc()’ is deprecated [-Werror=deprecated-declarations]
+     int main() { return somefunc();}
+                         ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:25: error: ‘int somefunc()’ is deprecated [-Werror=deprecated-declarations]
+     int main() { return somefunc();}
+                         ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:34: error: ‘int somefunc()’ is deprecated [-Werror=deprecated-declarations]
+     int main() { return somefunc();}
+                                  ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^
+cc1plus: all warnings being treated as errors
+CMakeFiles/cmTC_392b1.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_392b1.dir/src.cxx.o' failed
+make[3]: *** [CMakeFiles/cmTC_392b1.dir/src.cxx.o] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_392b1/fast' failed
+make[2]: *** [cmTC_392b1/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5c234/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5c234.dir/build.make CMakeFiles/cmTC_5c234.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5c234.dir/src.cxx.o
+/usr/bin/x86_64-linux-gnu-g++     -Wextra -std=c++11 -Wall -Werror -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-missing-field-initializers -Wno-maybe-uninitialized -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCOMPILER_HAS_DEPRECATED   -o CMakeFiles/cmTC_5c234.dir/src.cxx.o -c /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:11: error: expected constructor, destructor, or type conversion before ‘(’ token
+ __declspec(deprecated) int somefunc() { return 0; }
+           ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:34: error: ‘somefunc’ was not declared in this scope
+     int main() { return somefunc();}
+                                  ^
+CMakeFiles/cmTC_5c234.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5c234.dir/src.cxx.o' failed
+make[3]: *** [CMakeFiles/cmTC_5c234.dir/src.cxx.o] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5c234/fast' failed
+make[2]: *** [cmTC_5c234/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+Source file was:
+__declspec(deprecated) int somefunc() { return 0; }
+    int main() { return somefunc();}
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_13221/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_13221.dir/build.make CMakeFiles/cmTC_13221.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13221.dir/CheckSymbolExists.c.o
+/usr/bin/x86_64-linux-gnu-gcc    -g -O2 -fstack-protector-strong -Wformat -Werror=format-security     -o CMakeFiles/cmTC_13221.dir/CheckSymbolExists.c.o   -c /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_13221
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13221.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security     -Wl,-Bsymbolic-functions -Wl,-z,relro  CMakeFiles/cmTC_13221.dir/CheckSymbolExists.c.o  -o cmTC_13221 -rdynamic 
+CMakeFiles/cmTC_13221.dir/CheckSymbolExists.c.o: na função `main':
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8: referência indefinida para `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_13221.dir/build.make:97: recipe for target 'cmTC_13221' failed
+make[3]: *** [cmTC_13221] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_13221/fast' failed
+make[2]: *** [cmTC_13221/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+File /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e6580/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e6580.dir/build.make CMakeFiles/cmTC_e6580.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6580.dir/CheckFunctionExists.c.o
+/usr/bin/x86_64-linux-gnu-gcc    -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e6580.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e6580
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6580.dir/link.txt --verbose=1
+/usr/bin/x86_64-linux-gnu-gcc  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCHECK_FUNCTION_EXISTS=pthread_create   -Wl,-Bsymbolic-functions -Wl,-z,relro  CMakeFiles/cmTC_e6580.dir/CheckFunctionExists.c.o  -o cmTC_e6580 -rdynamic -lpthreads 
+/usr/bin/ld: não foi possível encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e6580.dir/build.make:97: recipe for target 'cmTC_e6580' failed
+make[3]: *** [cmTC_e6580] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e6580/fast' failed
+make[2]: *** [cmTC_e6580/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1b190/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1b190.dir/build.make CMakeFiles/cmTC_1b190.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1b190.dir/src.cxx.o
+/usr/bin/x86_64-linux-gnu-g++     -Wextra -std=c++11 -Wall -Werror -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-missing-field-initializers -Wno-maybe-uninitialized -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTC_1b190.dir/src.cxx.o -c /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:25: error: ‘int somefunc()’ is deprecated [-Werror=deprecated-declarations]
+     int main() { return somefunc();}
+                         ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:25: error: ‘int somefunc()’ is deprecated [-Werror=deprecated-declarations]
+     int main() { return somefunc();}
+                         ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:34: error: ‘int somefunc()’ is deprecated [-Werror=deprecated-declarations]
+     int main() { return somefunc();}
+                                  ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+ __attribute__((__deprecated__)) int somefunc() { return 0; }
+                                     ^
+cc1plus: all warnings being treated as errors
+CMakeFiles/cmTC_1b190.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_1b190.dir/src.cxx.o' failed
+make[3]: *** [CMakeFiles/cmTC_1b190.dir/src.cxx.o] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1b190/fast' failed
+make[2]: *** [cmTC_1b190/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED failed with the following output:
+Change Dir: /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7efa7/fast"
+make[2]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7efa7.dir/build.make CMakeFiles/cmTC_7efa7.dir/build
+make[3]: Entering directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7efa7.dir/src.cxx.o
+/usr/bin/x86_64-linux-gnu-g++     -Wextra -std=c++11 -Wall -Werror -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-unknown-pragmas -Wno-missing-field-initializers -Wno-maybe-uninitialized -g -O2 -fstack-protector-strong -Wformat -Werror=format-security  -DCOMPILER_HAS_DEPRECATED   -o CMakeFiles/cmTC_7efa7.dir/src.cxx.o -c /home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:1:11: error: expected constructor, destructor, or type conversion before ‘(’ token
+ __declspec(deprecated) int somefunc() { return 0; }
+           ^
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp/src.cxx:2:34: error: ‘somefunc’ was not declared in this scope
+     int main() { return somefunc();}
+                                  ^
+CMakeFiles/cmTC_7efa7.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_7efa7.dir/src.cxx.o' failed
+make[3]: *** [CMakeFiles/cmTC_7efa7.dir/src.cxx.o] Error 1
+make[3]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7efa7/fast' failed
+make[2]: *** [cmTC_7efa7/fast] Error 2
+make[2]: Leaving directory '/home/iamaro/Workspace/facter/ext/CMakeFiles/CMakeTmp'
+
+Source file was:
+__declspec(deprecated) int somefunc() { return 0; }
+    int main() { return somefunc();}

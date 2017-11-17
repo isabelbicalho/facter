@@ -4,7 +4,8 @@ export DH_VERBOSE=1
 export VERBOSE=1
 
 PREFIX      :=/usr
-BUILDPREFIX :=/opt/pl-build-tools
+# BUILDPREFIX :=/opt/pl-build-tools
+BUILDPREFIX :=/usr
 CPPFLAGS    :=$(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS      :=$(shell dpkg-buildflags --get CFLAGS)
 CXXFLAGS    :=$(shell dpkg-buildflags --get CXXFLAGS)
@@ -19,12 +20,12 @@ clean:
 
 override_dh_auto_configure:
 	$(BUILDPREFIX)/bin/cmake \
-	-DCMAKE_TOOLCHAIN_FILE=$(BUILDPREFIX)/pl-build-toolchain.cmake \
 	-DCMAKE_VERBOSE_MAKEFILE=ON \
 	-DCMAKE_INSTALL_PREFIX=$(PREFIX) \
-	-DBOOST_STATIC=ON \
-	-DYAMLCPP_STATIC=ON \
-	.
+	-DBOOST_STATIC=OFF \
+	-DYAMLCPP_STATIC=OFF \
+	..
+	# -DCMAKE_TOOLCHAIN_FILE=$(BUILDPREFIX)/pl-build-toolchain.cmake \
 
 override_dh_auto_build:
 	$(MAKE) -j$(NUMPROC) DESTDIR=$(CURDIR)/debian/tmp

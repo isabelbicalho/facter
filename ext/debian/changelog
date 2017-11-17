@@ -1,0 +1,5 @@
+facter (3.9.3-1) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- Isabel <iamaro@iamaro-421tech>  Tue, 14 Nov 2017 18:36:14 -0200

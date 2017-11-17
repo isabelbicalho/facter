@@ -1,0 +1,382 @@
+Start testing: Nov 16 18:43 -02
+----------------------------------------------------------
+1/2 Testing: libfacter tests
+1/2 Test: libfacter tests
+Command: "/home/iamaro/Workspace/facter/ext/bin/libfacter_test"
+Directory: /home/iamaro/Workspace/facter/ext
+"libfacter tests" start time: Nov 16 18:43 -02
+Output:
+----------------------------------------------------------
+===============================================================================
+All tests passed (10477 assertions in 69 test cases)
+
+<end of output>
+Test time =   2.13 sec
+----------------------------------------------------------
+Test Passed.
+"libfacter tests" end time: Nov 16 18:43 -02
+"libfacter tests" time elapsed: 00:00:02
+----------------------------------------------------------
+
+2/2 Testing: facter smoke
+2/2 Test: facter smoke
+Command: "/home/iamaro/Workspace/facter/ext/bin/facter"
+Directory: /home/iamaro/Workspace/facter/ext
+"facter smoke" start time: Nov 16 18:43 -02
+Output:
+----------------------------------------------------------
+disks => {
+  sda => {
+    model => "KINGSTON SUV400S",
+    size => "223.57 GiB",
+    size_bytes => 240057409536,
+    vendor => "ATA"
+  }
+}
+dmi => {
+  bios => {
+    release_date => "07/07/2015",
+    vendor => "Dell Inc.",
+    version => "A04"
+  },
+  board => {
+    manufacturer => "Dell Inc.",
+    product => "0PYXMC"
+  },
+  chassis => {
+    type => "Portable"
+  },
+  manufacturer => "Dell Inc.",
+  product => {
+    name => "Vostro 14-5480"
+  }
+}
+facterversion => 3.9.3
+filesystems => btrfs,ext2,ext3,ext4,squashfs,vfat
+identity => {
+  gid => 1000,
+  group => "iamaro",
+  privileged => false,
+  uid => 1000,
+  user => "iamaro"
+}
+is_virtual => false
+kernel => Linux
+kernelmajversion => 4.8
+kernelrelease => 4.8.0-53-generic
+kernelversion => 4.8.0
+load_averages => {
+  15m => 0.95,
+  1m => 2.18,
+  5m => 1.51
+}
+memory => {
+  swap => {
+    available => "7.91 GiB",
+    available_bytes => 8495558656,
+    capacity => "0%",
+    total => "7.91 GiB",
+    total_bytes => 8495558656,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  system => {
+    available => "4.44 GiB",
+    available_bytes => 4763033600,
+    capacity => "42.47%",
+    total => "7.71 GiB",
+    total_bytes => 8278872064,
+    used => "3.27 GiB",
+    used_bytes => 3515838464
+  }
+}
+mountpoints => {
+  / => {
+    available => "183.87 GiB",
+    available_bytes => 197424861184,
+    capacity => "13.33%",
+    device => "/dev/sda1",
+    filesystem => "ext4",
+    options => [
+      "rw",
+      "relatime",
+      "errors=remount-ro",
+      "data=ordered"
+    ],
+    size => "212.15 GiB",
+    size_bytes => 227790172160,
+    used => "28.28 GiB",
+    used_bytes => 30365310976
+  },
+  /dev/shm => {
+    available => "3.61 GiB",
+    available_bytes => 3874050048,
+    capacity => "6.41%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev"
+    ],
+    size => "3.86 GiB",
+    size_bytes => 4139433984,
+    used => "253.09 MiB",
+    used_bytes => 265383936
+  },
+  /run => {
+    available => "708.07 MiB",
+    available_bytes => 742465536,
+    capacity => "10.32%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "noexec",
+      "relatime",
+      "size=808484k",
+      "mode=755"
+    ],
+    size => "789.54 MiB",
+    size_bytes => 827887616,
+    used => "81.46 MiB",
+    used_bytes => 85422080
+  },
+  /run/cgmanager/fs => {
+    available => "100.00 KiB",
+    available_bytes => 102400,
+    capacity => "0%",
+    device => "cgmfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "relatime",
+      "size=100k",
+      "mode=755"
+    ],
+    size => "100.00 KiB",
+    size_bytes => 102400,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /run/lock => {
+    available => "5.00 MiB",
+    available_bytes => 5238784,
+    capacity => "0.08%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev",
+      "noexec",
+      "relatime",
+      "size=5120k"
+    ],
+    size => "5.00 MiB",
+    size_bytes => 5242880,
+    used => "4.00 KiB",
+    used_bytes => 4096
+  },
+  /run/user/1000 => {
+    available => "789.50 MiB",
+    available_bytes => 827850752,
+    capacity => "0.00%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev",
+      "relatime",
+      "size=808484k",
+      "mode=700",
+      "uid=1000",
+      "gid=1000"
+    ],
+    size => "789.54 MiB",
+    size_bytes => 827887616,
+    used => "36.00 KiB",
+    used_bytes => 36864
+  },
+  /sys/fs/cgroup => {
+    available => "3.86 GiB",
+    available_bytes => 4139433984,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "mode=755"
+    ],
+    size => "3.86 GiB",
+    size_bytes => 4139433984,
+    used => "0 bytes",
+    used_bytes => 0
+  }
+}
+networking => {
+  dhcp => "192.168.1.1",
+  domain => "nvxltech.com",
+  fqdn => "iamaro-421tech.nvxltech.com",
+  hostname => "iamaro-421tech",
+  interfaces => {
+    enp6s0 => {
+      mac => "20:47:47:fc:da:63",
+      mtu => 1500
+    },
+    lo => {
+      bindings => [
+        {
+          address => "127.0.0.1",
+          netmask => "255.0.0.0",
+          network => "127.0.0.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "::1",
+          netmask => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+          network => "::1"
+        }
+      ],
+      ip => "127.0.0.1",
+      ip6 => "::1",
+      mtu => 65536,
+      netmask => "255.0.0.0",
+      netmask6 => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      network => "127.0.0.0",
+      network6 => "::1"
+    },
+    tun0 => {
+      bindings => [
+        {
+          address => "10.0.50.8",
+          netmask => "255.255.255.0",
+          network => "10.0.50.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::ecab:9550:1fb5:477d",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      ip => "10.0.50.8",
+      ip6 => "fe80::ecab:9550:1fb5:477d",
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "10.0.50.0",
+      network6 => "fe80::"
+    },
+    wlp7s0 => {
+      bindings => [
+        {
+          address => "192.168.1.34",
+          netmask => "255.255.255.0",
+          network => "192.168.1.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::454c:fa7a:bb2c:b24c",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      dhcp => "192.168.1.1",
+      ip => "192.168.1.34",
+      ip6 => "fe80::454c:fa7a:bb2c:b24c",
+      mac => "4c:34:88:c3:5d:a7",
+      mtu => 1500,
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "192.168.1.0",
+      network6 => "fe80::"
+    }
+  },
+  ip => "192.168.1.34",
+  ip6 => "fe80::454c:fa7a:bb2c:b24c",
+  mac => "4c:34:88:c3:5d:a7",
+  mtu => 1500,
+  netmask => "255.255.255.0",
+  netmask6 => "ffff:ffff:ffff:ffff::",
+  network => "192.168.1.0",
+  network6 => "fe80::",
+  primary => "wlp7s0"
+}
+os => {
+  architecture => "x86_64",
+  distro => {
+    codename => "sonya",
+    description => "Linux Mint 18.2 Sonya",
+    id => "LinuxMint",
+    release => {
+      full => "18.2",
+      major => "18",
+      minor => "2"
+    }
+  },
+  family => "Debian",
+  hardware => "x86_64",
+  name => "LinuxMint",
+  release => {
+    full => "18",
+    major => "18"
+  },
+  selinux => {
+    enabled => false
+  }
+}
+partitions => {
+  /dev/sda1 => {
+    mount => "/",
+    size => "215.66 GiB",
+    size_bytes => 231559135232
+  },
+  /dev/sda2 => {
+    size => "1.00 KiB",
+    size_bytes => 1024
+  },
+  /dev/sda5 => {
+    size => "7.91 GiB",
+    size_bytes => 8495562752
+  }
+}
+path => /home/iamaro/bin:/home/iamaro/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+processors => {
+  count => 4,
+  isa => "x86_64",
+  models => [
+    "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+    "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+    "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+    "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz"
+  ],
+  physicalcount => 1,
+  speed => "3.00 GHz"
+}
+ruby => {
+  platform => "x86_64-linux-gnu",
+  sitedir => "/usr/local/lib/site_ruby/2.3.0",
+  version => "2.3.1"
+}
+system_uptime => {
+  days => 0,
+  hours => 3,
+  seconds => 14089,
+  uptime => "3:54 hours"
+}
+timezone => -02
+virtual => physical
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"facter smoke" end time: Nov 16 18:43 -02
+"facter smoke" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 16 18:43 -02
